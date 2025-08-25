@@ -15,6 +15,8 @@ Dự án được phát triển trong khuôn khổ học phần môn học Lập
 - [Kiến trúc phần mềm](#-kiến-trúc-phần-mềm)
 - [Cấu trúc thư mục](#-cấu-trúc-thư-mục)
 - [Hướng dẫn cài đặt & chạy](#-hướng-dẫn-cài-đặt--chạy)
+- [Thành viên nhóm](#-thành-viên-nhóm)
+- [License](#-license)
 
 ---
 
@@ -81,4 +83,18 @@ QuanLyKyTucXa_main/
 - Mở solution DormitoryManagementSystem.sln bằng Visual Studio.
 - Chuột phải project UI → chọn Set as Startup Project.
 - Nhấn Ctrl + F5 để chạy.
+
+---
+
+## 👥 Thành viên nhóm
+2254052042 – Bùi Dạ Lý
+
+2254050009 – Huỳnh Lệ Giang
+
+2254052008 – Võ Thị Ngọc Chi
+
+---
+
+## 📄 License
+Dự án chỉ sử dụng cho mục đích học tập và nghiên cứu. Không sử dụng cho mục đích thương mại.
 
