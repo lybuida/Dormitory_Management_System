@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A5621F9F-C724-4F35-BF14-2C5A7190F1BA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyKyTucXa_main</RootNamespace>
+    <AssemblyName>QuanLyKyTucXa_main</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.4.0\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.7\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChatBotControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChatBotControl.Designer.cs">
+      <DependentUpon>ChatBotControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachDangKy.Designer.cs">
+      <DependentUpon>DanhSachDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhSachNhanVien.Designer.cs">
+      <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaoCaoLuongNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaoCaoLuongNhanVien.Designer.cs">
+      <DependentUpon>FrmBaoCaoLuongNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDangKyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangKyPhong.Designer.cs">
+      <DependentUpon>FrmDangKyPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangNhap.Designer.cs">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyKyLuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyKyLuat.Designer.cs">
+      <DependentUpon>FrmQuanLyKyLuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyNguoiDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyNguoiDung.Designer.cs">
+      <DependentUpon>FrmQuanLyNguoiDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyNhanVien.Designer.cs">
+      <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyPhong.Designer.cs">
+      <DependentUpon>FrmQuanLyPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyThietBi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyThietBi.Designer.cs">
+      <DependentUpon>FrmQuanLyThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyTienDien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyTienDien.Designer.cs">
+      <DependentUpon>FrmQuanLyTienDien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLyTienNuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLyTienNuoc.Designer.cs">
+      <DependentUpon>FrmQuanLyTienNuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSuaNhanVien.Designer.cs">
+      <DependentUpon>FrmSuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThanhToanLuongNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThanhToanLuongNhanVien.Designer.cs">
+      <DependentUpon>FrmThanhToanLuongNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThemNhanVien.Designer.cs">
+      <DependentUpon>FrmThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmThongBaoSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmThongBaoSinhVien.Designer.cs">
+      <DependentUpon>FrmThongBaoSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuanLySinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuanLySinhVien.Designer.cs">
+      <DependentUpon>FrmQuanLySinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyDay.Designer.cs">
+      <DependentUpon>QuanLyDay.cs</DependentUpon>
+    </Compile>
+    <None Include="Resources\icons8-delete-100 %282%292.png" />
+    <None Include="Resources\icons8-google-sheets-60.png" />
+    <None Include="Resources\icons8-bunk-bed-261.png" />
+    <EmbeddedResource Include="ChatBotControl.resx">
+      <DependentUpon>ChatBotControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachDangKy.resx">
+      <DependentUpon>DanhSachDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhSachNhanVien.resx">
+      <DependentUpon>DanhSachNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaoCaoLuongNhanVien.resx">
+      <DependentUpon>FrmBaoCaoLuongNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangKyPhong.resx">
+      <DependentUpon>FrmDangKyPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangNhap.resx">
+      <DependentUpon>FrmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyKyLuat.resx">
+      <DependentUpon>FrmQuanLyKyLuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyNguoiDung.resx">
+      <DependentUpon>FrmQuanLyNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyNhanVien.resx">
+      <DependentUpon>FrmQuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyPhong.resx">
+      <DependentUpon>FrmQuanLyPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLySinhVien.resx">
+      <DependentUpon>FrmQuanLySinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyThietBi.resx">
+      <DependentUpon>FrmQuanLyThietBi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyTienDien.resx">
+      <DependentUpon>FrmQuanLyTienDien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuanLyTienNuoc.resx">
+      <DependentUpon>FrmQuanLyTienNuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSuaNhanVien.resx">
+      <DependentUpon>FrmSuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThanhToanLuongNhanVien.resx">
+      <DependentUpon>FrmThanhToanLuongNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThemNhanVien.resx">
+      <DependentUpon>FrmThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmThongBaoSinhVien.resx">
+      <DependentUpon>FrmThongBaoSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="QuanLyDay.resx">
+      <DependentUpon>QuanLyDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="DejaVuSans.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QuanLy_Assistant\QuanLy_Assistant.csproj">
+      <Project>{fa46aed0-38bb-4ec7-b80d-4a21e7ab730e}</Project>
+      <Name>QuanLy_Assistant</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuanLy_BLL\QuanLy_BLL.csproj">
+      <Project>{2cffc70a-921e-4b22-bef2-6f1e2ebab23c}</Project>
+      <Name>QuanLy_BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TransferObject\TransferObject.csproj">
+      <Project>{969867e0-e6a4-4653-8303-61d8aacf20bf}</Project>
+      <Name>TransferObject</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bolt %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open-door %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat-box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-mortgage-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hand-cursor-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-separated-lists-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-sorting-arrows-horizontal-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gmail-logo-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-100 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-100 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salary-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salary-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-100 %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cells-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notifications-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-popup-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-register-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-done-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-trash-can-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-synchronize-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pay-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ktx.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-male-user-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-26 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-management-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-employee-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-stack-of-money-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-student-male-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gear-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lightning-bolt-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-water-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-company-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-stairs-up-27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bunk-bed-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-electrical-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-learning-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gmail-logo-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-chat-bubble-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\large_image_956df3bc70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-contacts-941.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-student-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-open-door-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-computer-support-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-student-male-261.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-circle-chart-36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-plus-100 %281%292.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
