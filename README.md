@@ -7,6 +7,16 @@
 
 Dự án được phát triển trong khuôn khổ học phần môn học Lập trình Cơ sở Dữ liệu tại trường Đại học mở TPHCM.
 
+---
+
+## 📑 Mục lục
+- [Tính năng chính](#-tính-năng-chính)
+- [Công nghệ sử dụng](#-công-nghệ-sử-dụng)
+- [Kiến trúc phần mềm](#-kiến-trúc-phần-mềm)
+- [Cấu trúc thư mục](#-cấu-trúc-thư-mục)
+- [Hướng dẫn cài đặt & chạy](#-hướng-dẫn-cài-đặt--chạy)
+
+---
 
 ## 🚀 Tính năng chính
 - **Quản lý phòng:** thêm/sửa/xóa phòng, phân loại theo loại phòng (thường, VIP), số lượng tối đa.
