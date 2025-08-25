@@ -26,23 +26,23 @@ Dự án được phát triển trong khuôn khổ học phần môn học Lập
 ---
 
 ## 🏗 Kiến trúc phần mềm
-- **Presentation Layer (WinForms): Quản lý giao diện, nhập liệu, xử lý sự kiện người dùng
-- **Business Logic Layer (BLL): Xử lý logic nghiệp vụ (tính tiền phòng, xác thực hợp đồng, kiểm tra sức chứa phòng)
-- **Data Access Layer (DAL): Giao tiếp với SQL Server, thực thi Stored Procedures, CRUD
-- **Database (SQL Server): Các bảng: SinhVien, Phong, HopDong, HoaDon, NhanVien, KyLuat, ...
+- Presentation Layer (WinForms): Quản lý giao diện, nhập liệu, xử lý sự kiện người dùng
+- Business Logic Layer (BLL): Xử lý logic nghiệp vụ (tính tiền phòng, xác thực hợp đồng, kiểm tra sức chứa phòng)
+- Data Access Layer (DAL): Giao tiếp với SQL Server, thực thi Stored Procedures, CRUD
+- Database (SQL Server): Các bảng: SinhVien, Phong, HopDong, HoaDon, NhanVien, KyLuat, ...
 
 ---
 
 ## 📂 Cấu trúc thư mục
 QuanLyKyTucXa_main/
-- **QuanLyKyTucXa_GUI/ # Giao diện WinForms
-- **QuanLy.BLL/ # Business Logic Layer
-- **QuanLy.DAL/ # Data Access Layer
-- **TransferObject/ # Data Transfer Objects
-- **scripts/ # Script SQL tạo & seed dữ liệu
-- **docs/ # Báo cáo, ERD, DFD, UML
-- **README.md
-- **.gitignore
+- QuanLyKyTucXa_GUI/ # Giao diện WinForms
+- QuanLy.BLL/ # Business Logic Layer
+- QuanLy.DAL/ # Data Access Layer
+- TransferObject/ # Data Transfer Objects
+- scripts/ # Script SQL tạo & seed dữ liệu
+- docs/ # Báo cáo, ERD, DFD, UML
+- README.md
+- .gitignore
 
 ---
 
@@ -68,7 +68,7 @@ QuanLyKyTucXa_main/
 </connectionStrings>
 
 ### 4) Build & Run
-- **Mở solution DormitoryManagementSystem.sln bằng Visual Studio.
-- **Chuột phải project UI → chọn Set as Startup Project.
-- **Nhấn Ctrl + F5 để chạy.
+- Mở solution DormitoryManagementSystem.sln bằng Visual Studio.
+- Chuột phải project UI → chọn Set as Startup Project.
+- Nhấn Ctrl + F5 để chạy.
 
